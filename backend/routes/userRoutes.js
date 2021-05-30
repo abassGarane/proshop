@@ -9,5 +9,11 @@ import {
 const router = express.Router();
 router.route('/').post(registerUser);
 router.post('/login', authUser);
+// @access:
+// private
+// @route:
+// GET/api/users/profile
+// @desc:
+// Get user profile
 router.route('/profile').get(protect, getUserProfile);
 export default router;
